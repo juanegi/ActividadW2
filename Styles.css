@@ -1,0 +1,74 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: lightblue; /* Color por defecto */
+}
+
+.texto {
+    text-align: center;
+    margin: 20px;
+    
+}
+
+.imagen {
+    width: 600px; /* Ajusta el tamaño de la imagen al ancho del contenedor */
+    max-width: 600px; /* Limita el ancho máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 50%;
+    border: 50%;
+}
+
+
+/* Texto por defecto para escritorio */
+#id-text::before {
+    content: "Bill Cipher";
+    font-size: 24px; /* Tamaño del texto */
+    margin-bottom: 10px; /* Espacio entre el texto y la imagen */
+
+}
+
+#img {
+    width: 600px;
+    max-width: 600px;
+    content: url('/GIT/OIP\ \(1\).jpg');
+}
+
+/* Media Queries el formato para cambiar el color de fondo según el dispositivo */
+
+/* Tablets (entre 768px y 1024px) */
+@media only screen and (min-width: 768px ) and (max-width: 1024px)
+ {
+    body {
+        background-color: lightgreen;
+
+        #id-text::before {        /*Proceso de cambio de texto usando el width de pagina*/                        /**/  
+            content: "Sigue";
+        }
+        #img {
+            width: 100%;
+    max-width: 600px;
+            content: url('/GIT/OIP.jpg');
+        }
+    }
+}
+
+/* Teléfonos móviles ( screen de menos de 768px) */
+@media only screen and (max-width: 767px) {
+    body {
+        background-color: lightcoral;
+        #id-text::before {
+            content: "VIVO!";
+        }
+        #img {
+            width: 100%;
+           max-width: 600px;
+            content: url('/GIT/R.png');
+        }
+
+    }
+}
